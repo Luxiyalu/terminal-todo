@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <a className="logo-container" href="https://github.com/Luxiyalu" target="_blank"><img src={logo} className="app-logo" alt="logo" /></a>
+        <a className="logo-container" href="https://github.com/Luxiyalu/terminal-todo" target="_blank"><img src={logo} className="app-logo" alt="logo" /></a>
         <Todo />
       </div>
     );
