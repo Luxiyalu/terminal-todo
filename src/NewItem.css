@@ -1,0 +1,37 @@
+.new-item-input-render {
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap:break-word;
+  opacity: 1;
+}
+.blank {
+  color: transparent;
+}
+
+.caret {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes "blink" {
+  from, to {background-color: rgb(0, 255, 0); }
+  50% {background-color: transparent; }
+}
+@-moz-keyframes blink {
+  from, to {background-color: rgb(0, 255, 0); }
+  50% {background-color: transparent; }
+}
+@-webkit-keyframes "blink" {
+  from, to {background-color: rgb(0, 255, 0); }
+  50% {background-color: transparent; }
+}
+@-ms-keyframes "blink" {
+  from, to {background-color: rgb(0, 255, 0); }
+  50% {background-color: transparent; }
+}
+@-o-keyframes "blink" {
+  from, to {background-color: rgb(0, 255, 0); }
+  50% {background-color: transparent; }
+}

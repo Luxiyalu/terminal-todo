@@ -1,0 +1,40 @@
+.list-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 66px;
+  padding: 12px 12px 0;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+.last-login {
+  padding-bottom: 16px;
+}
+.todo-list {
+}
+
+.bottom-container{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 10px 14px;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(0,255,0);
+}
+.controlls-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.controlls-container p {
+  display: inline;
+}
+.state-switch .state:hover,
+.clear-completed span:hover,
+.state-switch.state-all .state-all,
+.state-switch.state-active .state-active,
+.state-switch.state-completed .state-completed {
+  text-decoration: underline;
+}

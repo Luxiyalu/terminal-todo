@@ -1,0 +1,12 @@
+.todo-item p {
+  display: inline;
+}
+.todo-item.completed p {
+  text-decoration: line-through;
+}
+.todo-item .cursor-pointer:hover {
+  text-decoration: underline;
+}
+.todo-item .button-undone {display: none; }
+.todo-item.completed .button-undone {display: inline; }
+.todo-item.completed .button-complete {display: none; }

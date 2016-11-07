@@ -1,0 +1,23 @@
+.App {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-container {
+  position: fixed;
+  z-index: 20;
+  right: 0px;
+  top: 10px;
+  animation: App-logo-spin infinite 20s linear;
+  opacity: .3;
+  outline: none;
+}
+.app-logo {
+  height: 60px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
