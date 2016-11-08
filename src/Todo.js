@@ -61,8 +61,14 @@ class Todo extends Component {
     }
   }
   handleNewInput(value) {
+    // if it's on "complete items" state, switch to "all"
+    // otherwise won't see a difference
+
     this.setState((prevState, props) => {
-      return {list: prevState.list.concat(createItem(value))};
+      return {
+        state: (prevState.state === 'completed' ? 'all' : prevState.state),
+        list: prevState.list.concat(createItem(value))
+      };
     });
   }
   handleStateChange(value) {

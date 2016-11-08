@@ -61,17 +61,19 @@ class NewInput extends Component {
   }
   handleKeyDown(e) { // can detect direction keys & upper case characters
     // https://en.wikipedia.org/wiki/List_of_Unicode_characters
-    // console.log('keydown', e.keyCode)
+    // console.log('keydown', e.which, e.charCode, e.keyCode)
 
     if (e.which === 37) { // left key
       this.handleCaret('-1');
     } else if (e.which === 39) { // right key
       this.handleCaret('+1');
     } else if (e.which === 8) { // backspace key
+      e.preventDefault();
       this.setState((prevState) => ({
         value: removeCharAt(prevState.value, prevState.caret - 1)
       }));
       this.handleCaret('-1');
+      return false;
     } else if (e.which === 127) { // delete key
       this.setState((prevState) => ({
         value: removeCharAt(prevState.value, prevState.caret)
@@ -83,10 +85,11 @@ class NewInput extends Component {
     }
   }
   handleKeyPress(e) { // can detect upper/lower cases
-    if (e.keyCode < 32 || (e.keyCode > 126 && e.keyCode < 160)) return; // control keys
+    // console.log('keypress', e.which, e.charCode, e.keyCode)
+    if (e.which < 32 || (e.which > 126 && e.which < 160)) return; // control keys
     // http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec
 
-    const char = String.fromCharCode(e.keyCode);
+    const char = String.fromCharCode(e.which);
     this.setState((prevState) => ({value: insertCharAt(prevState.value, prevState.caret, char)}));
     this.handleCaret('+1');
   }
