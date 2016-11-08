@@ -25,8 +25,8 @@
   50% {background-color: transparent; }
 }
 @-moz-keyframes blink {
-  from, to {background-color: rgb(0, 255, 0); color: red;}
-  50% {background-color: transparent; color: green;}
+  from, to {background-color: rgb(0, 255, 0);}
+  50% {background-color: transparent;}
 }
 @-ms-keyframes blink {
   from, to {background-color: rgb(0, 255, 0); }
